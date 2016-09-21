@@ -8,9 +8,10 @@ using Shop.Data;
 namespace Shop.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160920154826_Initial1")]
+    partial class Initial1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -182,18 +183,6 @@ namespace Shop.Data.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Good");
-                });
-
-            modelBuilder.Entity("Shop.Models.PurchaserPage", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("name");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("PurchaserPage");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>

@@ -22,5 +22,9 @@ namespace Shop.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
+
+        public DbSet<Good> Good { get; set; }
+
+        public DbSet<PurchaserPage> PurchaserPage { get; set; }
     }
 }
